@@ -26,6 +26,14 @@ pipeline:
                     command: echo hello world
                   timeout: ""
                   type: Run
+              - step:
+                  type: Test
+                  name: Test_1
+                  identifier: Test_1
+                  spec:
+                    shell: Sh
+                    command: mvn test
+                    intelligenceMode: true
           platform:
             os: Linux
             arch: Amd64
